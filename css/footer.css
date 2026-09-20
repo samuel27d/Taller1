@@ -1,0 +1,153 @@
+/* ==========================================================================
+   6. PIE DE PÁGINA PROFESIONAL (FOOTER MULTICOLUMNA)
+   ========================================================================== */
+
+.footer-principal {
+    background-color: var(--bg-footer);
+    color: #efefef;
+    margin-top: 60px;
+    padding-top: 50px;
+    border-top: 3px solid #4a4a4a;
+}
+
+.footer-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 35px;
+}
+
+/* Columna de la Marca */
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-logo-icono {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #2b2b2b, #5f5f5f);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.footer-logo-icono svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.footer-logo-nombre {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.footer-logo-nombre span {
+    color: #d9d9d9;
+}
+
+.footer-descripcion {
+    font-size: 0.88rem;
+    color: #b8b8b5;
+    line-height: 1.6;
+}
+
+/* Títulos de Sección en Footer */
+.footer-columna-titulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer-columna-titulo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #f3f3f3;
+}
+
+/* Listas y Enlaces en Footer */
+.footer-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-item {
+    font-size: 0.88rem;
+    color: #b8b8b5;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.4;
+}
+
+.footer-item strong {
+    color: #d9d9d9;
+}
+
+.footer-enlace {
+    color: #b8b8b5;
+    text-decoration: none;
+    transition: var(--transicion-suave);
+}
+
+.footer-enlace:hover {
+    color: #ffffff;
+    padding-left: 4px;
+}
+
+/* Badges de Medios de Pago */
+.footer-pagos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge-pago {
+    background-color: #2c2c2c;
+    color: #d9d9d9;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #5b5b5b;
+}
+
+/* Barra Inferior de Derechos Reservados */
+.footer-bottom {
+    background-color: #0d0d0d;
+    border-top: 1px solid #2a2a2a;
+    padding: 18px 20px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: #8b8b87;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

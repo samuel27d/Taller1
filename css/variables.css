@@ -1,0 +1,54 @@
+/* ==========================================================================
+   1. VARIABLES DE DISEÑO (DESIGN TOKENS)
+   ========================================================================== */
+
+:root {
+    /* Paleta Neutra y de Fondo */
+    --bg-principal: #f2f2f0;
+    --bg-header: #ffffff;
+    --bg-tarjeta: #ffffff;
+    --bg-footer: #111111;
+    --color-blanco: #ffffff;
+    --color-borde: #d8d8d4;
+    --color-borde-suave: #efefed;
+
+    /* Tipografía y Textos */
+    --fuente-principal: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --color-texto: #1d1d1d;
+    --color-texto-secundario: #5c5c59;
+    --color-texto-claro: #8b8b87;
+    --color-titulo: #121212;
+    --color-primario: #1a1a1a;
+    --color-primario-oscuro: #000000;
+
+    /* Botones e Interacciones */
+    --color-boton-hover: #3b3b3b;
+    --color-boton-borde-hover: #4a4a4a;
+    --color-acento: #2d2d2d;
+    --color-acento-hover: #1b1b1b;
+    --color-exito: #4d4d4d;
+    --color-peligro: #666666;
+
+    /* Temas y Acentos por Categoría */
+    --color-inicio: #4f4f4f;
+    --color-hamburguesas: #363636;
+    --color-perros: #5b5b5b;
+    --color-salchipapas: #777777;
+    --color-bebidas: #989898;
+
+    /* Sombras y Elevaciones */
+    --sombra-header: 0 2px 10px rgba(0, 0, 0, 0.05);
+    --sombra-tarjeta: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --sombra-hover: 0 10px 24px rgba(0, 0, 0, 0.1);
+    --sombra-carrito: -5px 0 25px rgba(0, 0, 0, 0.15);
+    --sombra-boton: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    /* Radios de Borde */
+    --radio-tarjeta: 12px;
+    --radio-boton: 8px;
+    --radio-pill: 50px;
+    --radio-control: 6px;
+
+    /* Transiciones */
+    --transicion-suave: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}

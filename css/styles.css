@@ -1,0 +1,36 @@
+/* ==========================================================================
+   STYLES.CSS - HOJA DE ESTILOS PRINCIPAL MODULAR
+   QuickOrder - Menú Digital Internacional & Kiosco de Pedidos
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* 1. Variables de Diseño y Tokens */
+@import url('variables.css');
+
+/* 2. Estilos Base, Layout y Header Principal con Logo */
+@import url('base.css');
+
+/* 3. Hero Banner, Beneficios y Anuncios */
+@import url('hero.css');
+
+/* 4. Navegación y Menú de Categorías */
+@import url('navigation.css');
+
+/* 5. Tarjetas de Productos (Cards) */
+@import url('cards.css');
+
+/* 6. Secciones y Categorías Específicas */
+@import url('categories.css');
+
+/* 7. Carrito de Compras Elegante (Drawer Lateral y Controles) */
+@import url('cart.css');
+
+/* 8. Modal de Confirmación de Pedido (Tipo Kiosco / Recibo McDonald's) */
+@import url('modal.css');
+
+/* 9. Pie de Página Profesional (Footer Multicolumna) */
+@import url('footer.css');
+
+/* 10. Adaptabilidad y Responsive Design */
+@import url('responsive.css');

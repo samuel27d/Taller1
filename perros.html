@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickOrder – Menú de Perros Calientes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Barra Superior de Anuncios Promocionales -->
+    <div class="top-bar-anuncio">
+        🚀 <span>DOMICILIOS EXPRESS:</span> ¡Envíos gratis en pedidos superiores a $50.000! • Tiempo estimado: 25-35 min
+    </div>
+
+    <!-- Encabezado Superior con Logo y Acceso al Carrito -->
+    <header class="header-principal">
+        <div class="header-contenedor">
+            <a href="index.html" class="logo-enlace" aria-label="QuickOrder Inicio">
+                <div class="logo-icono">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                </div>
+                <div class="logo-texto">
+                    <span class="logo-nombre">Quick<span>Order</span></span>
+                    <span class="logo-eslogan">Sabor & Calidad Internacional</span>
+                </div>
+            </a>
+
+            <div class="header-acciones">
+                <button id="btn-abrir-carrito" class="btn-abrir-carrito" aria-label="Ver carrito de compras">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                    </svg>
+                    <span class="btn-texto">Mi Pedido</span>
+                    <span id="badge-contador-header" class="badge-contador">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú de Navegación por Categorías con Iconos SVG -->
+    <div class="nav-categorias-wrapper">
+        <nav class="categorias" aria-label="Categorías del menú">
+            <a href="index.html" class="btn-categoria inicio">
+                <span class="cat-icono"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span>
+                <span>Inicio</span>
+            </a>
+            <a href="hamburguesas.html" class="btn-categoria hamburguesas">
+                <span class="cat-icono"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 4.48 2 7.5c0 .64.25 1.25.7 1.78C2.26 9.87 2 10.66 2 11.5c0 1.93 1.57 3.5 3.5 3.5H19c1.93 0 3.5-1.57 3.5-3.5 0-.84-.26-1.63-.7-2.22.45-.53.7-1.14.7-1.78C22 4.48 17.52 2 12 2zm-8.5 15c0 2.21 3.81 4 8.5 4s8.5-1.79 8.5-4H3.5z"/></svg></span>
+                <span>Hamburguesas</span>
+            </a>
+            <a href="perros.html" class="btn-categoria perros activo">
+                <span class="cat-icono"><svg viewBox="0 0 24 24"><path d="M18.8 6.2c-1.6-1.6-4.1-1.6-5.7 0L4.2 15.1c-1.6 1.6-1.6 4.1 0 5.7 1.6 1.6 4.1 1.6 5.7 0l8.9-8.9c1.6-1.6 1.6-4.1 0-5.7zm-2.8 4.3L7.1 19.4c-.8.8-2.1.8-2.8 0s-.8-2.1 0-2.8L13.2 7.7c.8-.8 2.1-.8 2.8 0s.8 2.1 0 2.8z"/></svg></span>
+                <span>Perros Calientes</span>
+            </a>
+            <a href="salchipapas.html" class="btn-categoria salchipapas">
+                <span class="cat-icono"><svg viewBox="0 0 24 24"><path d="M18.5 3H5.5C4.67 3 4 3.67 4 4.5v15c0 .83.67 1.5 1.5 1.5h13c.83 0 1.5-.67 1.5-1.5v-15c0-.83-.67-1.5-1.5-1.5zM7 6h2v9H7V6zm4 0h2v11h-2V6zm4 0h2v8h-2V6z"/></svg></span>
+                <span>Salchipapas</span>
+            </a>
+            <a href="bebidas.html" class="btn-categoria bebidas">
+                <span class="cat-icono"><svg viewBox="0 0 24 24"><path d="M20 3H4v2h1.5l1.5 14.5c.1 1 1 1.5 2 1.5h6c1 0 1.9-.5 2-1.5L18.5 5H20V3zm-5 15H9L7.8 6h8.4L15 18z"/></svg></span>
+                <span>Bebidas</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Banner Dedicado de Categoría: Perros Calientes -->
+    <section class="categoria-banner perros-banner">
+        <div class="cat-banner-info">
+            <span class="cat-banner-badge">LÍNEA GOURMET & SUIZA</span>
+            <h1 class="cat-banner-titulo">Perros Calientes con Toque de Autor</h1>
+            <p class="cat-banner-desc">
+                Salchichas premium jumbo, queso fundido gratinado, tocineta sellada y salsas de la casa que elevan la experiencia tradicional.
+            </p>
+            <div class="cat-banner-chips">
+                <span class="cat-chip">🌭 Salchichas Jumbo</span>
+                <span class="cat-chip">🧀 Queso Gratinado</span>
+                <span class="cat-chip">🥓 Tocineta Crujiente</span>
+            </div>
+        </div>
+        <div class="cat-banner-media">
+            <img src="img/perro_suizo.jpg" alt="Perros Calientes Gourmet QuickOrder" class="cat-banner-img">
+        </div>
+    </section>
+
+    <!-- Sección de Perros Calientes Organizada por Líneas -->
+    <main class="seccion-platos seccion-perros">
+        
+        <!-- Subsección 1: Especiales & Gourmet -->
+        <div class="subseccion-header">
+            <h2 class="subseccion-titulo">
+                🌭 Especiales de la Casa & Gourmet
+            </h2>
+            <span class="subseccion-contador">Alta Receta</span>
+        </div>
+
+        <div class="contenedor-platos">
+            
+            <!-- Producto 1: Perro Suizo -->
+            <article class="tarjeta-plato">
+                <div class="tarjeta-media">
+                    <span class="badge-destacado favorito">PREMIUM</span>
+                    <img src="img/perro_suizo.jpg" alt="Perro Caliente Suizo con Salchicha Suiza" class="imagen-plato">
+                </div>
+                <div class="tarjeta-cuerpo">
+                    <div class="tarjeta-meta">
+                        <span class="pill-porciones">🇨🇭 Salchicha Suiza 200g</span>
+                        <span class="pill-porciones">🧀 Extra Fundido</span>
+                    </div>
+                    <h3 class="nombre-plato">Perro Suizo</h3>
+                    <p class="descripcion-plato">Salchicha suiza ahumada premium, abundante queso mozzarella gratinado, tocineta sellada y ensalada agridulce.</p>
+                </div>
+                <div class="tarjeta-footer-acciones">
+                    <p class="precio-plato">$ 24.000</p>
+                    <button class="btn-agregar" data-nombre="Perro Suizo" data-valor="24000">Agregar</button>
+                </div>
+            </article>
+
+            <!-- Producto 2: Perro Mexicano -->
+            <article class="tarjeta-plato">
+                <div class="tarjeta-media">
+                    <span class="badge-destacado nuevo">PICANTE SUAVE</span>
+                    <img src="img/perro_mexicano.jpg" alt="Perro Caliente Estilo Mexicano" class="imagen-plato">
+                </div>
+                <div class="tarjeta-cuerpo">
+                    <div class="tarjeta-meta">
+                        <span class="pill-porciones">🥑 Guacamole Real</span>
+                        <span class="pill-porciones">🌶️ Jalapeños & Nachos</span>
+                    </div>
+                    <h3 class="nombre-plato">Perro Mexicano</h3>
+                    <p class="descripcion-plato">Salchicha seleccionada, guacamole artesanal, jalapeños encurtidos, queso cheddar derretido, frijol y nachos crujientes.</p>
+                </div>
+                <div class="tarjeta-footer-acciones">
+                    <p class="precio-plato">$ 22.000</p>
+                    <button class="btn-agregar" data-nombre="Perro Mexicano" data-valor="22000">Agregar</button>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Subsección 2: Línea Tradicional & Clásica -->
+        <div class="subseccion-header">
+            <h2 class="subseccion-titulo">
+                🔥 Línea Tradicional & Clásica
+            </h2>
+            <span class="subseccion-contador">Los Favoritos de Siempre</span>
+        </div>
+
+        <div class="contenedor-platos">
+
+            <!-- Producto 3: Perro Especial -->
+            <article class="tarjeta-plato">
+                <div class="tarjeta-media">
+                    <span class="badge-destacado">MÁS PEDIDO</span>
+                    <img src="img/perro_caliente.jpg" alt="Perro Caliente Especial con Tocineta y Queso" class="imagen-plato">
+                </div>
+                <div class="tarjeta-cuerpo">
+                    <div class="tarjeta-meta">
+                        <span class="pill-porciones">🥓 Tocineta Picada</span>
+                        <span class="pill-porciones">🍍 Salsa Piña</span>
+                    </div>
+                    <h3 class="nombre-plato">Perro Especial</h3>
+                    <p class="descripcion-plato">Salchicha americana jumbo, queso gratinado, tocineta crujiente, papitas fosforito doradas y salsa de piña artesanal.</p>
+                </div>
+                <div class="tarjeta-footer-acciones">
+                    <p class="precio-plato">$ 18.000</p>
+                    <button class="btn-agregar" data-nombre="Perro Especial" data-valor="18000">Agregar</button>
+                </div>
+            </article>
+
+            <!-- Producto 4: Perro Clásico -->
+            <article class="tarjeta-plato">
+                <div class="tarjeta-media">
+                    <span class="badge-destacado combo">TRADICIONAL</span>
+                    <img src="img/perro_caliente.jpg" alt="Perro Caliente Tradicional" class="imagen-plato">
+                </div>
+                <div class="tarjeta-cuerpo">
+                    <div class="tarjeta-meta">
+                        <span class="pill-porciones">🌭 Pan Brioche</span>
+                        <span class="pill-porciones">🍟 Papa Fosforito</span>
+                    </div>
+                    <h3 class="nombre-plato">Perro Clásico</h3>
+                    <p class="descripcion-plato">Salchicha tradicional en pan suave al vapor, papa fosforito crocante, cebolla finamente picada y salsas clásicas.</p>
+                </div>
+                <div class="tarjeta-footer-acciones">
+                    <p class="precio-plato">$ 14.000</p>
+                    <button class="btn-agregar" data-nombre="Perro Clásico" data-valor="14000">Agregar</button>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Drawer Lateral del Carrito de Compras -->
+    <div id="carrito-overlay" class="carrito-overlay"></div>
+    <aside id="carrito-panel" class="carrito-panel" aria-label="Carrito de compras">
+        <div class="carrito-header">
+            <div class="carrito-titulo-wrapper">
+                <h3 class="carrito-titulo">Tu Pedido</h3>
+                <span id="carrito-badge-items" class="carrito-badge-items">0 items</span>
+            </div>
+            <button id="btn-cerrar-carrito" class="btn-cerrar-carrito" aria-label="Cerrar carrito">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+            </button>
+        </div>
+
+        <div id="carrito-cuerpo" class="carrito-cuerpo"></div>
+
+        <div class="carrito-footer">
+            <div class="carrito-resumen-fila">
+                <span>Subtotal:</span>
+                <span id="carrito-subtotal-monto">$ 0</span>
+            </div>
+            <div class="carrito-total-fila">
+                <span>Total:</span>
+                <span id="carrito-total-monto" class="carrito-total-monto">$ 0</span>
+            </div>
+            <div class="carrito-acciones">
+                <button id="btn-finalizar-pedido" class="btn-finalizar-pedido">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Confirmar Pedido
+                </button>
+                <button id="btn-vaciar-carrito" class="btn-vaciar-carrito">Vaciar Carrito</button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Pie de Página Profesional y Elegante -->
+    <footer class="footer-principal">
+        <div class="footer-contenedor">
+            <div class="footer-marca">
+                <a href="index.html" class="footer-logo">
+                    <div class="footer-logo-icono">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                    </div>
+                    <span class="footer-logo-nombre">Quick<span>Order</span></span>
+                </a>
+                <p class="footer-descripcion">
+                    Tu cadena de restaurantes digital. Ingredientes premium certificados, preparación al instante y servicio rápido a domicilio.
+                </p>
+            </div>
+
+            <div class="footer-columna">
+                <h4 class="footer-columna-titulo">Horarios de Atención</h4>
+                <ul class="footer-lista">
+                    <li class="footer-item"><strong>Lunes – Jueves:</strong> 12:00 PM – 10:00 PM</li>
+                    <li class="footer-item"><strong>Viernes – Sábado:</strong> 12:00 PM – 11:30 PM</li>
+                    <li class="footer-item"><strong>Domingos:</strong> 1:00 PM – 9:30 PM</li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4 class="footer-columna-titulo">Contacto & Domicilios</h4>
+                <ul class="footer-lista">
+                    <li class="footer-item"><strong>Dirección:</strong> Calle 50 # 45 - 20, Medellín</li>
+                    <li class="footer-item"><strong>WhatsApp:</strong> +57 (300) 123-4567</li>
+                    <li class="footer-item"><strong>Email:</strong> contacto@quickorder.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4 class="footer-columna-titulo">Medios de Pago</h4>
+                <div class="footer-pagos-grid">
+                    <span class="badge-pago">Efectivo</span>
+                    <span class="badge-pago">Nequi</span>
+                    <span class="badge-pago">Daviplata</span>
+                    <span class="badge-pago">Tarjetas Débito/Crédito</span>
+                    <span class="badge-pago">PSE</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 QuickOrder – Sistema de Pedidos y Menú Digital Internacional. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

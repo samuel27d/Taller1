@@ -1,0 +1,169 @@
+/* ==========================================================================
+   4. TARJETA DE PRODUCTO / PLATO (ESTILO KIOSCO INTERNACIONAL)
+   ========================================================================== */
+
+.tarjeta-plato {
+    background-color: var(--color-blanco);
+    border-radius: var(--radio-tarjeta);
+    box-shadow: var(--sombra-tarjeta);
+    border: 1px solid var(--color-borde-suave);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-bottom: 20px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.tarjeta-plato:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-hover);
+    border-color: #d4d4d1;
+}
+
+/* Contenedor de Imagen y Badge Superior */
+.tarjeta-media {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    background-color: #f3f3f1;
+}
+
+.imagen-plato {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-plato:hover .imagen-plato {
+    transform: scale(1.06);
+}
+
+/* Badges Flotantes de Categoría / Promoción */
+.badge-destacado {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: linear-gradient(135deg, #4a4a4a, #161616);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 5px 12px;
+    border-radius: var(--radio-pill);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+    z-index: 2;
+}
+
+.badge-destacado.nuevo {
+    background: linear-gradient(135deg, #666666, #2a2a2a);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.badge-destacado.favorito {
+    background: linear-gradient(135deg, #808080, #2d2d2d);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.badge-destacado.combo {
+    background: linear-gradient(135deg, #a0a0a0, #3a3a3a);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* Cuerpo de la Tarjeta */
+.tarjeta-cuerpo {
+    padding: 16px 18px 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Píldora de Detalles Rápidos (Porción / Tipo) */
+.tarjeta-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.pill-porciones {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #5f5f5b;
+    background-color: #f3f3f1;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+/* Nombre del Plato */
+.nombre-plato {
+    font-size: 1.18rem;
+    font-weight: 800;
+    color: var(--color-titulo);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+/* Descripción de Ingredientes */
+.descripcion-plato {
+    font-size: 0.88rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+/* Pie de la Tarjeta: Precio y Botón */
+.tarjeta-footer-acciones {
+    padding: 14px 18px 0;
+    border-top: 1px solid var(--color-borde-suave);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.precio-plato {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #121212;
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+/* Botón Agregar al Pedido */
+.btn-agregar {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: var(--radio-pill);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transicion-suave);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+}
+
+.btn-agregar:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.24);
+}
+
+.btn-agregar:active {
+    transform: scale(0.95);
+}
+
+.btn-agregar.agregado {
+    background-color: var(--color-exito);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}

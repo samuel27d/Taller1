@@ -1,0 +1,59 @@
+/* ==========================================================================
+   5. ESTILOS ESPECÍFICOS POR CATEGORÍA Y SECCIÓN
+   ========================================================================== */
+
+/* --- SECCIÓN: INICIO / FAVORITOS --- */
+.seccion-favoritos .titulo-seccion {
+    border-bottom: 2px solid var(--color-inicio);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin: 0 auto 25px auto;
+}
+
+/* --- SECCIÓN: HAMBURGUESAS --- */
+.seccion-hamburguesas .titulo-seccion {
+    border-bottom: 2px solid var(--color-hamburguesas);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin: 0 auto 25px auto;
+}
+
+.seccion-hamburguesas .precio-plato {
+    color: var(--color-hamburguesas);
+}
+
+/* --- SECCIÓN: PERROS CALIENTES --- */
+.seccion-perros .titulo-seccion {
+    border-bottom: 2px solid var(--color-perros);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin: 0 auto 25px auto;
+}
+
+.seccion-perros .precio-plato {
+    color: var(--color-perros);
+}
+
+/* --- SECCIÓN: SALCHIPAPAS --- */
+.seccion-salchipapas .titulo-seccion {
+    border-bottom: 2px solid var(--color-salchipapas);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin: 0 auto 25px auto;
+}
+
+.seccion-salchipapas .precio-plato {
+    color: var(--color-salchipapas);
+}
+
+/* --- SECCIÓN: BEBIDAS --- */
+.seccion-bebidas .titulo-seccion {
+    border-bottom: 2px solid var(--color-bebidas);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin: 0 auto 25px auto;
+}
+
+.seccion-bebidas .precio-plato {
+    color: var(--color-bebidas);
+}

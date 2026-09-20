@@ -1,0 +1,109 @@
+/* ==========================================================================
+   7. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Laptops y Pantallas Medianas (<= 992px) */
+@media (max-width: 992px) {
+    .footer-contenedor {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+    .header-contenedor {
+        padding: 12px 15px;
+    }
+
+    .logo-nombre {
+        font-size: 1.25rem;
+    }
+
+    .logo-icono {
+        width: 36px;
+        height: 36px;
+    }
+
+    .btn-abrir-carrito {
+        padding: 8px 14px;
+        font-size: 0.88rem;
+    }
+
+    .categorias {
+        gap: 8px;
+    }
+
+    .btn-categoria {
+        padding: 8px 14px;
+        font-size: 0.88rem;
+    }
+
+    .titulo-seccion {
+        font-size: 1.45rem;
+    }
+
+    .contenedor-platos {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .footer-contenedor {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .carrito-panel {
+        max-width: 100%;
+    }
+}
+
+/* Teléfonos Móviles (<= 520px) */
+@media (max-width: 520px) {
+    .header-contenedor {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo-eslogan {
+        display: none;
+    }
+
+    .btn-abrir-carrito span.btn-texto {
+        display: none;
+    }
+
+    .btn-abrir-carrito {
+        padding: 8px 10px;
+        border-radius: 50%;
+    }
+
+    .categorias {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .btn-categoria {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .btn-categoria.inicio {
+        grid-column: span 2;
+    }
+
+    .contenedor-platos {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-plato {
+        height: 190px;
+    }
+
+    .footer-contenedor {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
